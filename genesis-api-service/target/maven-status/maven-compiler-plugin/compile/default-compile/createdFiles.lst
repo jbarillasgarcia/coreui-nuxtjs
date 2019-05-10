@@ -1,0 +1,7 @@
+com/wau/genesis/apiservice/model/TransactionEntity.class
+com/wau/genesis/apiservice/view/DataRewardsActivationXlsxView.class
+com/wau/genesis/apiservice/dao/TransactionRepository.class
+com/wau/genesis/apiservice/util/SwaggerConfiguration.class
+com/wau/genesis/apiservice/controller/CrmController.class
+com/wau/genesis/apiservice/service/TransactionService.class
+com/wau/genesis/apiservice/ApiApplication.class

@@ -1,0 +1,7 @@
+/home/abarillas/Git/Waumovil/genesis/genesis-api-service/src/main/java/com/wau/genesis/apiservice/controller/CrmController.java
+/home/abarillas/Git/Waumovil/genesis/genesis-api-service/src/main/java/com/wau/genesis/apiservice/model/TransactionEntity.java
+/home/abarillas/Git/Waumovil/genesis/genesis-api-service/src/main/java/com/wau/genesis/apiservice/view/DataRewardsActivationXlsxView.java
+/home/abarillas/Git/Waumovil/genesis/genesis-api-service/src/main/java/com/wau/genesis/apiservice/dao/TransactionRepository.java
+/home/abarillas/Git/Waumovil/genesis/genesis-api-service/src/main/java/com/wau/genesis/apiservice/service/TransactionService.java
+/home/abarillas/Git/Waumovil/genesis/genesis-api-service/src/main/java/com/wau/genesis/apiservice/util/SwaggerConfiguration.java
+/home/abarillas/Git/Waumovil/genesis/genesis-api-service/src/main/java/com/wau/genesis/apiservice/ApiApplication.java

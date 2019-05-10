@@ -1,0 +1,4 @@
+com/wau/genesis/zuulgateway/util/JwtConfig.class
+com/wau/genesis/zuulgateway/security/adapter/CustomWebSecurityConfigurerAdapter.class
+com/wau/genesis/zuulgateway/security/filter/CustomOncePerRequestFilter.class
+com/wau/genesis/zuulgateway/ZuulApplication.class

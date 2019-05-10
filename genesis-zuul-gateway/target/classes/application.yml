@@ -1,0 +1,281 @@
+spring:
+    application:
+        name: zuul-server
+    profiles:
+        active: development
+        
+---
+
+spring:
+    profiles: development
+
+server:
+    port: 8762
+        
+eureka:
+    client:
+        register-with-eureka: false
+        fetch-registry: true
+        service-url:
+            default-zone: http://localhost:8761/eureka/
+
+# A prefix that can added to beginning of all requests. 
+# zuul.prefix=/api
+
+# Disable accessing services using service name (i.e. gallery-service).
+# They should be only accessed through the path defined below.
+zuul:
+    ignored-services: "*"
+    host:
+        connect-timeout-millis: 60000
+        socket-timeout-millis: 1200000
+    # Map paths to services
+    routes:
+        auth-service:
+            path: /auth/**
+            service-id: auth-service            
+            strip-prefix: false
+            # Exclude authorization from sensitive headers
+            sensitive-headers: Cookie,Set-Cookie
+        passwordRecovery-service:
+            path: /passwordRecovery/**
+            service-id: auth-service
+            strip-prefix: false
+            # Exclude authorization from sensitive headers
+            sensitive-headers: Cookie,Set-Cookie
+        me-service:
+             path: /me/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        user-service:
+             path: /user/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        role-service:
+             path: /authority/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        permission-service:
+             path: /privilege/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        privilege-category-service:
+             path: /privilegeCategory/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        api-service:
+            path: /crm/**
+            service-id: api-service
+            strip-prefix: false
+            # Exclude authorization from sensitive headers
+            sensitive-headers: Cookie,Set-Cookie
+            
+ribbon:
+    ConnectTimeout: 60000
+    ReadTimeout: 120000
+    
+security:
+    jwt:
+        uri: /auth/**
+        passwordRecoveryUri: /passwordRecovery/**
+        header: Authorization
+        prefix: Bearer 
+        expiration: 1800
+        secret: JwtSecretKey
+
+logging:
+    file: /logs/genesis-zuul-gateway.log
+    
+---
+
+spring:
+    profiles: stage
+
+server:
+    port: 8762
+        
+eureka:
+    client:
+        register-with-eureka: false
+        fetch-registry: true
+        service-url:
+            default-zone: http://localhost:8761/eureka/
+
+# A prefix that can added to beginning of all requests. 
+# zuul.prefix=/api
+
+# Disable accessing services using service name (i.e. gallery-service).
+# They should be only accessed through the path defined below.
+zuul:
+    ignored-services: "*"
+    host:
+        connect-timeout-millis: 60000
+        socket-timeout-millis: 1200000
+    # Map paths to services
+    routes:
+        auth-service:
+            path: /auth/**
+            service-id: auth-service            
+            strip-prefix: false
+            # Exclude authorization from sensitive headers
+            sensitive-headers: Cookie,Set-Cookie
+        passwordRecovery-service:
+            path: /passwordRecovery/**
+            service-id: auth-service
+            strip-prefix: false
+            # Exclude authorization from sensitive headers
+            sensitive-headers: Cookie,Set-Cookie
+        me-service:
+             path: /me/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        user-service:
+             path: /user/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        role-service:
+             path: /authority/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        permission-service:
+             path: /privilege/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        privilege-category-service:
+             path: /privilegeCategory/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        api-service:
+            path: /crm/**
+            service-id: api-service
+            strip-prefix: false
+            # Exclude authorization from sensitive headers
+            sensitive-headers: Cookie,Set-Cookie
+            
+ribbon:
+    ConnectTimeout: 60000
+    ReadTimeout: 120000
+    
+security:
+    jwt:
+        uri: /auth/**
+        passwordRecoveryUri: /passwordRecovery/**
+        header: Authorization
+        prefix: Bearer 
+        expiration: 1800
+        secret: JwtSecretKey
+
+logging:
+    file: /logs/genesis-zuul-gateway.log
+
+---
+
+spring:
+    profiles: production
+
+server:
+    port: 8762
+        
+eureka:
+    client:
+        register-with-eureka: false
+        fetch-registry: true
+        service-url:
+            default-zone: http://localhost:8761/eureka/
+
+# A prefix that can added to beginning of all requests. 
+# zuul.prefix=/api
+
+# Disable accessing services using service name (i.e. gallery-service).
+# They should be only accessed through the path defined below.
+zuul:
+    ignored-services: "*"
+    host:
+        connect-timeout-millis: 60000
+        socket-timeout-millis: 1200000
+    # Map paths to services
+    routes:
+        auth-service:
+            path: /auth/**
+            service-id: auth-service            
+            strip-prefix: false
+            # Exclude authorization from sensitive headers
+            sensitive-headers: Cookie,Set-Cookie
+        passwordRecovery-service:
+            path: /passwordRecovery/**
+            service-id: auth-service
+            strip-prefix: false
+            # Exclude authorization from sensitive headers
+            sensitive-headers: Cookie,Set-Cookie
+        me-service:
+             path: /me/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        user-service:
+             path: /user/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        role-service:
+             path: /authority/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        permission-service:
+             path: /privilege/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        privilege-category-service:
+             path: /privilegeCategory/**
+             service-id: auth-service
+             strip-prefix: false
+             # Exclude authorization from sensitive headers
+             sensitive-headers: Cookie,Set-Cookie
+        api-service:
+            path: /crm/**
+            service-id: api-service
+            strip-prefix: false
+            # Exclude authorization from sensitive headers
+            sensitive-headers: Cookie,Set-Cookie
+            
+ribbon:
+    ConnectTimeout: 60000
+    ReadTimeout: 120000
+    
+security:
+    jwt:
+        uri: /auth/**
+        passwordRecoveryUri: /passwordRecovery/**
+        header: Authorization
+        prefix: Bearer 
+        expiration: 1800
+        secret: JwtSecretKey
+        
+logging:
+    file: /logs/genesis-zuul-gateway.log

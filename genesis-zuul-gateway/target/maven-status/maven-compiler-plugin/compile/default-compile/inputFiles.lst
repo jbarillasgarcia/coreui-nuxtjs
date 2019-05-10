@@ -1,0 +1,4 @@
+/home/abarillas/Git/Waumovil/genesis/genesis-zuul-gateway/src/main/java/com/wau/genesis/zuulgateway/ZuulApplication.java
+/home/abarillas/Git/Waumovil/genesis/genesis-zuul-gateway/src/main/java/com/wau/genesis/zuulgateway/util/JwtConfig.java
+/home/abarillas/Git/Waumovil/genesis/genesis-zuul-gateway/src/main/java/com/wau/genesis/zuulgateway/security/adapter/CustomWebSecurityConfigurerAdapter.java
+/home/abarillas/Git/Waumovil/genesis/genesis-zuul-gateway/src/main/java/com/wau/genesis/zuulgateway/security/filter/CustomOncePerRequestFilter.java
